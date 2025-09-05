@@ -42,5 +42,58 @@ public class Strings {
         String zzz = www.substring(11);
         System.out.println(zzz);
 
+        System.out.println("String Builder is Starting from here");
+
+        //String Builder from here
+        StringBuilder sb = new StringBuilder("Tony");
+        System.out.println(sb);
+
+        //char index at 1
+        System.out.println(sb.charAt(0));
+
+        //set char at index
+        sb.setCharAt(0, 'L');
+        System.out.println(sb);
+
+        sb.insert(2, 'N');
+        System.out.println(sb);
+
+        //delete the extra n
+        sb.delete(2, 4);
+        System.out.println(sb);
+
+        //addding in substring
+        sb.append(" ");
+        sb.append("S");
+        sb.append("T");
+        sb.append("a");
+        sb.append("r");
+        sb.append("k");
+        System.out.println(sb);
+        System.out.println(sb.length());
+
+        //reverse String
+        sb.reverse();
+        System.out.println(sb);
+
+        //reverse String
+        StringBuilder sbb = new StringBuilder("Yadav");
+        for(int i=0;i<sbb.length()/2;i++){
+            int front =i;
+            int back = sbb.length() -1 -i; // 5-1-0 =4
+
+            char frontChar = sbb.charAt(front);
+            char backChar = sbb.charAt(back);
+
+            sbb.setCharAt(front, backChar);
+            sbb.setCharAt(back, frontChar);
+            
+
+        }
+        //sbb.reverse();
+        System.out.println(sbb);
+        
+
+
     }
 }
