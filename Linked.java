@@ -38,6 +38,67 @@ class Solution {
     }
 }
 
+// deleting kth element from the linked list
+
+class solution {
+    public  Node deletek(Node head, int k){
+        if(head == null ) return head;
+        
+        if( k == 1){
+            Node temp = head;
+            head = head.next;
+            return head;
+        }
+
+        int cnt = 0;
+        Node temp = head;
+        Node prv = null;
+        while( temp != null ){
+            cnt++;
+            if(cnt == k){
+                prv.next = prv.next.next;
+                break;
+
+            }
+            prv = temp;
+            temp = temp.next;
+
+
+        }
+        return head;
+
+    }
+}
+
+class solutioN {
+    public  Node deleteEl(Node head, int el){
+        if(head == null ) return head;
+        
+        if(head.data == el){
+            Node temp = head;
+            head = head.next;
+            return head;
+        }
+
+        Node temp = head;
+        Node prv = null;
+        while( temp != null ){
+            
+            if(temp.data == el){
+                prv.next = prv.next.next;
+                break;
+
+            }
+            prv = temp;
+            temp = temp.next;
+
+
+        }
+        return head;
+
+    }
+}
+
 public class Linked {
     public static void main(String[] args) {
         // Create an array
@@ -51,5 +112,6 @@ public class Linked {
 
         // Print data stored in node
         System.out.println(y.data);
+
     }
 }
